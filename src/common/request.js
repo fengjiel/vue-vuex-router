@@ -1,8 +1,6 @@
 import axios from 'axios';
 import env from '@/config/env';
 
-const MOCKURL = ''; // mock数据地址
-
 /**
  * 自定义Axios实例
  */

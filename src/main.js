@@ -2,12 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import i18n from './config/lang'
-import filters from './filters'
 import 'amfe-flexible'
 
-import Toast from './components/toast/index'
-Vue.use(Toast);
 
 // 消除 click 移动浏览器300ms延迟
 import attachFastClick from 'fastclick'
@@ -23,15 +19,10 @@ Vue.config.productionTip = false
 
 Vue.config.productionTip = false
 
-// 全局过滤器
-Object.keys(filters).forEach(filterName => {
-    Vue.filter(filterName, filters[filterName])
-})
 
 /* eslint-disable no-new */
 new Vue({
     router,
     store,
-    i18n,
     render: h => h(App)
 }).$mount('#app')
