@@ -2,10 +2,29 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+require('events').EventEmitter.prototype._maxListeners = 100
+
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
+    /**
+     * 默认配置
+     */
+    baseUrl:'/',
+    publicPath:'/',
+    outputDir:'dist',
+    assetsDir:'',
+    indexPath:'index.html',
+    filenameHashing:true,
+    pages:undefined,
+    lintOnSave:process.env.NODE_ENV !== 'production',
+    runtimeCompiler:false,
+    transpileDependencies:[],
+    crossorigin:undefined,
+    integrity:false,
+    // end
+
     // 使用运行时编译器的 Vue 构建版本
     runtimeCompiler: true,
 

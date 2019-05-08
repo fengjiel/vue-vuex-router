@@ -20,8 +20,6 @@
 </template>
 
 <script>
-    import animate from 'animate.css';
-
     export default {
         props: {
             isVisible: {
