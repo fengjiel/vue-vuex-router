@@ -29,7 +29,6 @@
     import env from "@/config/env";
     import {getUserInfo} from "@/api/common";
     import animate from 'animate.css';
-    import NP from 'number-precision'
 
     export default {
         name: "home",
@@ -47,7 +46,7 @@
             ...mapState("user", ["userInfo", "rank"]),
             ...mapGetters("user", ["getUserInfo"]),
             number() {
-                return NP.plus(0.1, 0.2)
+                return 0.1+ 0.2
             }
         },
         mounted() {
